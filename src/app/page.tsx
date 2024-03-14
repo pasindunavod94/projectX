@@ -27,9 +27,10 @@ const Home = () => {
       scope: "openid",
     };
     let config = {
-      url: "/api/token",
+      url: "https://dev-project-x.auth.ap-southeast-1.amazoncognito.com/oauth2/token",
       method: "post",
       data,
+      headers: { "content-type": "application/x-www-form-urlencoded" },
     };
     setIsLoading(true);
     try {
