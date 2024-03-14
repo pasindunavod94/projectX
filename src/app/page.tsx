@@ -23,7 +23,7 @@ const Home = () => {
       client_id: "css2ard64fmtopviba5m8pf1r",
       code: code,
       redirect_uri:
-        "https://dev-projectx.s3.ap-southeast-1.amazonaws.com/index.html",
+        "https://project-x-gowj.vercel.app",
       scope: "openid",
     };
     let config = {
@@ -132,7 +132,7 @@ const Home = () => {
             </div>
             <div className="flex items-center justify-center">
               <Link
-                href="https://dev-project-x.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=css2ard64fmtopviba5m8pf1r&redirect_uri=https://dev-projectx.s3.ap-southeast-1.amazonaws.com/index.html&scope=openid&state"
+                href="https://dev-project-x.auth.ap-southeast-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=css2ard64fmtopviba5m8pf1r&redirect_uri=https://project-x-gowj.vercel.app&scope=openid&state"
                 className="w-full px-3 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:shadow transition duration-150 items-center justify-center"
               >
                 <img
