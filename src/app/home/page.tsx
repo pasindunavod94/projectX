@@ -33,7 +33,7 @@ const Dashboard = () => {
   const fetchPresignedUrl = async () => {
     let config = {
       timeout: 60000,
-      url: "/api/user/url",
+      url: "https://ugbl56p76xk3qnqaoo2dn346fi0zscre.lambda-url.ap-southeast-1.on.aws/",
       method: "post",
       headers: {
         Authorization: `${token?.token_type} ${token?.access_token}`,
@@ -109,10 +109,11 @@ const Dashboard = () => {
     const { emailSubject, emailContent, email } = rowData ?? {};
     let config = {
       timeout: 60000,
-      url: "/api/user/email/sent",
+      url: "https://rx7gtvpzghm7atmkyeawtutvya0fcifr.lambda-url.ap-southeast-1.on.aws/",
       method: "post",
       headers: {
         Authorization: `${token?.token_type} ${token?.access_token}`,
+         "Content-Type": "application/json",
       },
       data: JSON.stringify({
         email,
@@ -205,10 +206,11 @@ const Dashboard = () => {
     const { email, name } = row;
     let config = {
       timeout: 60000,
-      url: "/api/user/email",
+      url: "https://hv622ifdv7p56vheedfujxkdwm0gnten.lambda-url.ap-southeast-1.on.aws/",
       method: "post",
       headers: {
         Authorization: `${token?.token_type} ${token?.access_token}`,
+        "Content-Type": "application/json",
       },
       data: JSON.stringify({ email, clientName: name, senderName: user?.name }),
     };
