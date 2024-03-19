@@ -20,14 +20,16 @@ const Dashboard = () => {
   const [selectedRows, setSelectedRows] = React.useState([]);
   const presignedUrl = useAuthStore((state) => state.presignedUrl);
   useEffect(() => {
-    const decoded = jwtDecode(token?.id_token);
-    const { email } = decoded ?? {};
-    useAuthStore.setState({
-      user: {
-        name: email?.split("@")[0],
-        email,
-      },
-    });
+    if (token?.id_token) {
+      const decoded = jwtDecode(token?.id_token);
+      const { email } = decoded ?? {};
+      useAuthStore.setState({
+        user: {
+          name: email?.split("@")[0],
+          email,
+        },
+      });
+    }
   }, [token]);
 
   const fetchPresignedUrl = async () => {
